@@ -44,7 +44,7 @@ def main(filename):
       
 	os.system('clear')
 	#filename = "test.aln"
-	theTuple = MAlAModules.checknLoad(filename)
+	theTuple = optionmod1.checknLoad(filename)
 	if (theTuple == -1):
 	  print 'Please try again'
 	  yesEx = input("Would you like to try a new filename (Y) or Exit (X)? ")
