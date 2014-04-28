@@ -105,11 +105,17 @@ def main(filename):
 	print "Please open a multiple alignment file (Option 1) first"
     
     elif option3.match(option):
+      E = ""
       if (filename != "None"):
 	print "\t Option 3"
-	optionmod3.AlignmentExplorer(seqTup, alignStar, filename)
+	x = True
+	num = 0
+	while x == True:
+	  num = optionmod3.AlignmentExplorer(seqTup, alignStar, filename)
+	  if num == 0:
+	    x = False
       else:
-	print "Please open a multiple alignment file (Option 1) first"
+	print  "Please open a multiple alignment file (Option 1) first"
       
     elif option4.match(option):
       print "Option 4"
