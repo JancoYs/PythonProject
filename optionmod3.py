@@ -1,6 +1,6 @@
 #! /usr/bin/python
 import sys
-inport os
+import os
 
 def AlignmentExplorer(sexTup, alignS, filename):
   
