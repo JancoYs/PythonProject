@@ -118,7 +118,17 @@ def main(filename):
 	print  "Please open a multiple alignment file (Option 1) first"
       
     elif option4.match(option):
-      print "Option 4"
+      if (filename != "None"):
+	print "\tOption 4"
+	x = True
+	num = 0
+	while x == True:
+	  num = optionmod4.sequenceExplorer(seqTup)
+	  if num < 1:
+	    x = False
+	os.system('clear')
+      else:
+	  print "Please open a multiple alignment file (Option 1) first"
     
     elif option5.match(option):
       print "Option 5"
@@ -144,6 +154,7 @@ if __name__ == "__main__":
   import optionmod1
   import optionmod2
   import optionmod3
+  import optionmod4
   
   #1. DEFINE REG EXPRESSIONS!	
   #now seems like the best time to define various regular expressions! 
