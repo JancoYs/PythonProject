@@ -131,16 +131,22 @@ def main(filename):
 	  print "Please open a multiple alignment file (Option 1) first"
     
     elif option5.match(option):
-      print "Option 5"
+      if (filename != "None"):
+	print "\tOption 5"
+	optionmod5.GlycoSig(seqTup)
+      else:
+	  print "Please open a multiple alignment file (Option 1) first"
+    
     
     elif option6.match(option):
-      print "Option 6"
+      print "Option 6 - has not been implemented yet, sorry."
     
     elif option7.match(option):
-      print "Option 7"
+      print "Option 7 - Quit. Goodbye."
+      return 0
     
     else:
-      print "other"
+      print "Incorrect option, please try again:"
   
     #case options
 
@@ -155,6 +161,7 @@ if __name__ == "__main__":
   import optionmod2
   import optionmod3
   import optionmod4
+  import optionmod5
   
   #1. DEFINE REG EXPRESSIONS!	
   #now seems like the best time to define various regular expressions! 
